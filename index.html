@@ -33,28 +33,8 @@
                             <th scope="col">Minutes Away</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Death Train</th>
-                            <td>New York</td>
-                            <td>13:45</td>
-                            <td>15</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Happy Train</th>
-                            <td>New York</td>
-                            <td>13:45</td>
-                            <td>15</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Silly Train</th>
-                            <td>New York</td>
-                            <td>13:45</td>
-                            <td>15</td>
-                            <td>5</td>
-                        </tr>
+                    <tbody id="tbody">
+                        
                     </tbody>
                 </table>
             </div>
@@ -68,31 +48,47 @@
                 <form>
                     <div class="form-group">
                         <label for="trainName">Train Name</label>
-                        <input type="text" class="form-control" id="trainName">
+                        <input type="text" class="form-control" id="trainInput">
                     </div>
                     <div class="form-group">
-                        <label for="trainName">Train Name</label>
-                        <input type="text" class="form-control" id="trainName">
+                        <label for="trainName">Destination</label>
+                        <input type="text" class="form-control" id="destinationInput">
                     </div>
                     <div class="form-group">
-                        <label for="trainName">Train Name</label>
-                        <input type="text" class="form-control" id="trainName">
-                    </div>
-                    <div class="form-group">
-                        <label for="trainName">Train Name</label>
-                        <input type="text" class="form-control" id="trainName">
-                    </div>
-                    <div class="form-group">
-                        <label for="trainName">Train Name</label>
-                        <input type="text" class="form-control" id="trainName">
+                        <label for="trainName">First Time</label>
+                        <input type="time" class="form-control" id="firstTrainInput">
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="form-group">
+                        <label for="trainName">Frequency</label>
+                        <input type="number" class="form-control" id="frequencyInput">
+                    </div>
+
+                    <button id="add-train" type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
 
     </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCqMqRT7MF30-bVe2-RKTHtT6CbtTqhnng",
+            authDomain: "javits-train-app.firebaseapp.com",
+            databaseURL: "https://javits-train-app.firebaseio.com",
+            projectId: "javits-train-app",
+            storageBucket: "javits-train-app.appspot.com",
+            messagingSenderId: "978176914562",
+            appId: "1:978176914562:web:3175085bb16fd59312b09b"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -103,6 +99,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
 </body>
 
